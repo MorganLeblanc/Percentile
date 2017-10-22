@@ -24,6 +24,27 @@ int percentile(double percent, int size)
 
 int main()
 {
-    ifstreamdataFile("data.txt");
+    //Declare Variables
+    bool isFirst = true;
+    int size;
+    vector<int> values;
     
+    //create ifstream totake in file
+    ifstream dataFile("data.txt");
+    
+    //Process dataline byline
+    while(!dataFile.eof)
+    {
+        //If it is thefirstvalueset it to the size, otherwise add to values vector.
+        int number;
+        dataFile >> number;
+        if(isFirst)
+        {
+            size = number;
+        }
+        else
+        {
+            values.push_back(number);
+        }
+    }
 {
