@@ -47,4 +47,12 @@ int main()
             values.push_back(number);
         }
     }
-{
+    
+    //Sort the vector using vector sort
+    sort(values.begin(), values.end());
+    
+    //Print the three percentiles
+    cout << values[(percentile(.25, size))] << '\n';
+    cout << values[(percentile(.5, size))] << '\n';
+    cout << values[(percentile(.75, size))] << '\n';
+}
