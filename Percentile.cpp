@@ -54,5 +54,13 @@ int main()
     //Print the three percentiles
     cout << values[(percentile(.25, size))] << '\n';
     cout << values[(percentile(.5, size))] << '\n';
-    cout << values[(percentile(.75, size))] << '\n';
+    cout << values[(percentile(.75, size))];
+    
+    //Print sorted vector to file
+    ofstream outputFile;
+    outputFile.open("dataSorted.txt");
+    for(int i = 0; i < values.size(); i++)
+    {
+        outputFile << values[i] << ' ';
+    }
 }
